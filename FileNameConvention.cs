@@ -31,7 +31,8 @@ namespace Math_Naming_Convention
         {
             for (int i = 0; i < filesName.Count; i++)
             {
-                if (!percentCount.ContainsKey(percentInOrder1[i].ToString())) percentCount[percentInOrder1[i].ToString()] = 0;
+                if (!percentCount.ContainsKey(percentInOrder1[i].ToString()))
+                    percentCount[percentInOrder1[i].ToString()] = 0;
                 percentCount[percentInOrder1[i].ToString()]++;
             }
             return percentCount;
