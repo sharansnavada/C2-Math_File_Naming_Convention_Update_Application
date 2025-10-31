@@ -12,6 +12,8 @@ namespace Math_Naming_Convention
 
         public Dictionary<string,string> EditNamingConvention(List<string> filesName,List<int> percentInOrder1)
         {
+            dict = new Dictionary<string, string>();
+
             for (int i = 0 ; i < filesName.Count; i++)
             {
                 string[] splittedData = filesName[i].Split('.');
@@ -26,6 +28,8 @@ namespace Math_Naming_Convention
 
         public Dictionary<string, int> PercentCount(List<string> filesName, List<int> percentInOrder1)
         {
+            percentCount = new Dictionary<string, int>();
+
             for (int i = 0; i < filesName.Count; i++)
             {
                 if (!percentCount.ContainsKey(percentInOrder1[i].ToString()))
