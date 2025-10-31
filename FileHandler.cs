@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Linq;
 
 namespace Math_Naming_Convention
 {
@@ -12,23 +13,23 @@ namespace Math_Naming_Convention
         FilesNameData fnd = new FilesNameData();
         string denom1DirPath = ""; string denom2DirPath = ""; string denom5DirPath = ""; string denom10DirPath = ""; string denom100DirPath = ""; string denom200DirPath = "";
         
-        Dictionary<string, string> dict1;
-        Dictionary<string, int> percentDict1;
+        public Dictionary<string, string> dict1;
+        public Dictionary<string, int> percentDict1;
 
-        Dictionary<string, string> dict2;
-        Dictionary<string, int> percentDict2;
+        public Dictionary<string, string> dict2;
+        public Dictionary<string, int> percentDict2;
 
-        Dictionary<string, string> dict5;
-        Dictionary<string, int> percentDict5;
+        public Dictionary<string, string> dict5;
+        public Dictionary<string, int> percentDict5;
 
-        Dictionary<string, string> dict10;
-        Dictionary<string, int> percentDict10;
+        public Dictionary<string, string> dict10;
+        public Dictionary<string, int> percentDict10;
 
-        Dictionary<string, string> dict100;
-        Dictionary<string, int> percentDict100;
+        public Dictionary<string, string> dict100;
+        public Dictionary<string, int> percentDict100;
 
-        Dictionary<string, string> dict200;
-        Dictionary<string, int> percentDict200;
+        public Dictionary<string, string> dict200;
+        public Dictionary<string, int> percentDict200;
         #endregion
 
         #region constructor
@@ -213,6 +214,21 @@ namespace Math_Naming_Convention
                     }
                     File.AppendAllText(denom200DirPath, "\n total math count is " + count.ToString());
                     break;
+            }
+        }
+        #endregion
+        #region rename math files from c3 to c2
+        public void MoveMathFilesToNewRenamedFile(string directoryPath,Dictionary<string, string> dict)
+        {
+            if (Directory.Exists(directoryPath))
+            {
+                foreach (KeyValuePair<string,string> file in dict)
+                {
+                    string oldPath = directoryPath + "/" + file.Key;
+                    string newPath = Path.Combine(directoryPath, file.Value) + ".xml";
+
+                    File.Move(oldPath, newPath);
+                }
             }
         }
         #endregion
