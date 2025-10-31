@@ -93,45 +93,63 @@ namespace Math_Naming_Convention
             switch (denom)
             {
                 case 1:
+                    File.AppendAllText(denom1DirPath, "C3 Math                               C2 Math");
+                    File.AppendAllText(denom1DirPath, "\n=======================================================");
                     foreach (KeyValuePair<string, string> kvp in dict1)
                     {
                         File.AppendAllText(denom1DirPath, "\n" + kvp.Key + "  ----------->  " + kvp.Value);
                     }
+                    File.AppendAllText(denom1DirPath, "\n=======================================================");
                     break;
 
                 case 2:
+                    File.AppendAllText(denom2DirPath, "C3 Math                               C2 Math");
+                    File.AppendAllText(denom2DirPath, "\n=======================================================");
                     foreach (KeyValuePair<string, string> kvp in dict2)
                     {
                         File.AppendAllText(denom2DirPath, "\n" + kvp.Key + "  ----------->  " + kvp.Value);
                     }
+                    File.AppendAllText(denom2DirPath, "\n=======================================================");
                     break;
 
                 case 5:
+                    File.AppendAllText(denom5DirPath, "C3 Math                               C2 Math");
+                    File.AppendAllText(denom5DirPath, "\n=======================================================");
                     foreach (KeyValuePair<string, string> kvp in dict5)
                     {
                         File.AppendAllText(denom5DirPath, "\n" + kvp.Key + "  ----------->  " + kvp.Value);
                     }
+                    File.AppendAllText(denom5DirPath, "\n=======================================================");
                     break;
 
                 case 10:
+                    File.AppendAllText(denom10DirPath, "C3 Math                               C2 Math");
+                    File.AppendAllText(denom10DirPath, "\n=======================================================");
                     foreach (KeyValuePair<string, string> kvp in dict10)
                     {
                         File.AppendAllText(denom10DirPath, "\n" + kvp.Key + "  ----------->  " + kvp.Value);
                     }
+                    File.AppendAllText(denom10DirPath, "\n=======================================================");
                     break;
 
                 case 100:
+                    File.AppendAllText(denom100DirPath, "C3 Math                               C2 Math");
+                    File.AppendAllText(denom100DirPath, "\n=======================================================");
                     foreach (KeyValuePair<string, string> kvp in dict100)
                     {
                         File.AppendAllText(denom100DirPath, "\n" + kvp.Key + "  ----------->  " + kvp.Value);
                     }
+                    File.AppendAllText(denom100DirPath, "\n=======================================================");
                     break;
 
                 case 200:
+                    File.AppendAllText(denom200DirPath, "C3 Math                               C2 Math");
+                    File.AppendAllText(denom200DirPath, "\n=======================================================");
                     foreach (KeyValuePair<string, string> kvp in dict200)
                     {
                         File.AppendAllText(denom200DirPath, "\n" + kvp.Key + "  ----------->  " + kvp.Value);
                     }
+                    File.AppendAllText(denom200DirPath, "\n=======================================================");
                     break;
             }
         }
@@ -139,48 +157,61 @@ namespace Math_Naming_Convention
         #region countuniquepercents
         public void CountUniquePercentsInAllMath(int denom)
         {
+            int count = 0;
             switch (denom)
             {
                 case 1:
                     foreach (KeyValuePair<string, int> kvp in percentDict1)
                     {
                         File.AppendAllText(denom1DirPath, "\n" + kvp.Key + "  ----------->  " + kvp.Value);
+                        count += kvp.Value;
                     }
+                    File.AppendAllText(denom1DirPath, "\n total math count is " + count.ToString() );
                     break;
 
                 case 2:
                     foreach (KeyValuePair<string, int> kvp in percentDict2)
                     {
                         File.AppendAllText(denom2DirPath, "\n" + kvp.Key + "  ----------->  " + kvp.Value);
+                        count += kvp.Value;
                     }
+                    File.AppendAllText(denom2DirPath, "\n total math count is " + count.ToString());
                     break;
 
                 case 5:
                     foreach (KeyValuePair<string, int> kvp in percentDict5)
                     {
                         File.AppendAllText(denom5DirPath, "\n" + kvp.Key + "  ----------->  " + kvp.Value);
+                        count += kvp.Value;
                     }
+                    File.AppendAllText(denom5DirPath, "\n total math count is " + count.ToString());
                     break;
 
                 case 10:
                     foreach (KeyValuePair<string, int> kvp in percentDict10)
                     {
                         File.AppendAllText(denom10DirPath, "\n" + kvp.Key + "  ----------->  " + kvp.Value);
+                        count += kvp.Value;
                     }
+                    File.AppendAllText(denom10DirPath, "\n total math count is " + count.ToString());
                     break;
 
                 case 100:
                     foreach (KeyValuePair<string, int> kvp in percentDict100)
                     {
                         File.AppendAllText(denom100DirPath, "\n" + kvp.Key + "  ----------->  " + kvp.Value);
+                        count += kvp.Value;
                     }
+                    File.AppendAllText(denom100DirPath, "\n total math count is " + count.ToString());
                     break;
 
                 case 200:
                     foreach (KeyValuePair<string, int> kvp in percentDict200)
                     {
                         File.AppendAllText(denom200DirPath, "\n" + kvp.Key + "  ----------->  " + kvp.Value);
+                        count += kvp.Value;
                     }
+                    File.AppendAllText(denom200DirPath, "\n total math count is " + count.ToString());
                     break;
             }
         }

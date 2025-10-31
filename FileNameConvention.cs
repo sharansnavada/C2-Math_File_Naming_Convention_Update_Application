@@ -18,8 +18,9 @@ namespace Math_Naming_Convention
             {
                 string[] splittedData = filesName[i].Split('.');
 
-                string c2Name = splittedData[0] + "." + splittedData[2].TrimStart('l') + "." + percentInOrder1[i].ToString() + "." + splittedData[3] + "." + splittedData[4] + "." +
-                                "cSM2054" + "." + splittedData[1];
+                string c2Name = splittedData[0] + "." + splittedData[2].TrimStart('l') + "."
+                                + percentInOrder1[i].ToString() + "." + splittedData[3] + "."
+                                + splittedData[4] + "." +"cSM2054" + "." + splittedData[1];
 
                 dict[filesName[i]] = c2Name;
             }
