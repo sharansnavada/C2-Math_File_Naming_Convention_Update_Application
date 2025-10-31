@@ -20,9 +20,6 @@ namespace Math_Naming_Convention
                                 "cSM2054" + "." + splittedData[1];
 
                 dict[filesName[i]] = c2Name;
-
-                if (!percentCount.ContainsKey(percentInOrder1[i].ToString())) percentCount[percentInOrder1[i].ToString()] = 0;
-                percentCount[percentInOrder1[i].ToString()]++;
             }
             return dict;
         }
